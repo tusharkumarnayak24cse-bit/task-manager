@@ -1,0 +1,68 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+}
+
+header {
+  padding: 15px;
+  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+input, select {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+}
+
+button {
+  margin: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.task {
+  background: #334155;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  animation: fade 0.3s;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.overdue {
+  border: 1px solid red;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px);}
+  to { opacity: 1; }
+}
+
+/* MOBILE */
+@media(max-width:500px){
+  header {
+    flex-direction: column;
+  }
+}

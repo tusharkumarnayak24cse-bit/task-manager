@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Smart Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>⚡ TaskFlow</h1>
+  <div class="stats">
+    <span>Total: <b id="total">0</b></span>
+    <span>Done: <b id="done">0</b></span>
+    <span>Pending: <b id="pending">0</b></span>
+  </div>
+</header>
+
+<main>
+
+  <!-- ADD TASK -->
+  <section class="card">
+    <h2>Add Task</h2>
+    <input type="text" id="name" placeholder="Task name">
+    <input type="date" id="date">
+    <select id="priority">
+      <option>High</option>
+      <option selected>Medium</option>
+      <option>Low</option>
+    </select>
+    <button onclick="addTask()">Add Task</button>
+    <p id="msg"></p>
+  </section>
+
+  <!-- ACTIONS -->
+  <section class="card">
+    <h2>Actions</h2>
+    <input type="text" id="search" placeholder="Search..." oninput="searchTask()">
+    <button onclick="undo()">Undo Delete</button>
+    <button onclick="sortPriority()">Sort Priority</button>
+    <button onclick="sortDeadline()">Sort Deadline</button>
+    <button onclick="showAll()">Show All</button>
+  </section>
+
+  <!-- TASK LIST -->
+  <section class="card">
+    <h2>Tasks</h2>
+    <div id="list"></div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
